@@ -1,0 +1,11 @@
+http://www.meridianoutpost.com/resources/etools/calculators/calculator-morse-code.php
+
+Morse Code Audio: Click to play audio file (morsecode.wav)
+Speed: 20WPM / Tone: 800Hz
+Dots and Dashes: - .-. .- --.. . .-.  .-.. . .. - .  .  -.-. .- ..-.
+Original Text: TRAZER LEITE E CAFé
+
+Morse Code Audio: Click to play audio file (morsecode.wav)
+Speed: 20WPM / Tone: 800Hz
+Dots and Dashes: - .-. .- --.. . .-.  .-.. . .. - .  .  -.-. .- ..-. .
+Original Text: TRAZER LEITE E CAFE
