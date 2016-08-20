@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 """
-Conversions between hexadecimal strings or integers to modhex format.
-See https://demo.yubico.com/modhex.php
+Conversions between hexadecimal strings, integers and ASCII strings to/from
+modhex format. See https://demo.yubico.com/modhex.php.
 
     >>> hex2mod('0')
     'c'
@@ -18,6 +18,8 @@ See https://demo.yubico.com/modhex.php
     'vvv'
     >>> ascii2mod('A')
     'fb'
+    >>> ascii2mod('Az')
+    'fbil'
     >>> ascii2mod('test')
     'ifhgieif'
 
@@ -47,6 +49,10 @@ See https://demo.yubico.com/modhex.php
     True
     >>> mod2ascii('cc') == chr(0)
     True
+    >>> mod2ascii('FBIL')
+    'Az'
+    >>> mod2ascii('iFhGiEiF')
+    'test'
 
 """
 
@@ -87,4 +93,4 @@ def mod2ascii(mod_str):
     if len(mod_str) % 2:
         mod_str = 'c' + mod_str
     return ''.join(chr(mod2int(a+b)) for a, b
-                   in zip(mod_str[:-1], mod_str[1:]))
+                   in zip(mod_str[:-1:2], mod_str[1::2]))
