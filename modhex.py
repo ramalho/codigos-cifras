@@ -94,3 +94,22 @@ def mod2ascii(mod_str):
         mod_str = 'c' + mod_str
     return ''.join(chr(mod2int(a+b)) for a, b
                    in zip(mod_str[:-1:2], mod_str[1::2]))
+
+
+def help():
+    print('usage: %s [-d] <data>' % sys.argv[0])
+    sys.exit(-1)
+
+
+if __name__ == '__main__':
+    import sys
+    args = sys.argv[1:]
+    if len(args) not in (1, 2):
+        help()
+    if '-d' in args:
+        args.remove('-d')
+        if not args:
+            help()
+        print(mod2ascii(args[-1]))
+    else:
+        print(ascii2mod(args[-1]))
